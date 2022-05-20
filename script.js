@@ -25,6 +25,24 @@ var tmps1;
         return wow2;
     }
 
+    function CLICKSP(){
+        var pp1 = RC(color.length);
+            var pp2 =  RW(bb.length);
+            his1.push((his2.length+1).toString()+ ":  " + pp1 + " " + pp2);
+            
+            document.getElementById("dem1").innerHTML = his1[his1.length-1];
+            his2=his1;
+    }
+
+    function CLICKD(){
+        his2.pop();
+            console.log(his2);
+            if(his2.length>0)
+            document.getElementById("dem1").innerHTML = his2[his2.length-1];
+            else
+            document.getElementById("dem1").innerHTML = "E M P T Y";
+    }
+
     window.onkeypress = function(event) {
         if (event.which == 32) {
             var pp1 = RC(color.length);
